@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Create by : Ari & Selamat -->
+<FrameLayout android:id="@+id/fragment_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_greyish"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/lineDataPengguna"
+                    android:layout_below="@+id/rela1"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bantuan"
+                        android:layout_marginTop="20dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="25sp"
+                        android:textColor="#000"
+                        />
+
+                    <com.riyagayasen.easyaccordion.AccordionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        app:isAnimated="true"
+                        android:layout_marginHorizontal="10dp"
+                        app:heading="Panduan Login Aplikasi"
+                        app:isExpanded="false"
+                        app:isPartitioned="true">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:id="@+id/txtBuatLaporan"
+                            android:text="Masukan NIP untuk login aplikasi untuk bisa menggunakan ABDI Apps"
+                            />
+
+                    </com.riyagayasen.easyaccordion.AccordionView>
+
+                    <com.riyagayasen.easyaccordion.AccordionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        app:isAnimated="true"
+                        android:layout_marginHorizontal="10dp"
+                        app:heading="Panduan Absensi"
+                        app:isExpanded="false"
+                        app:isPartitioned="true">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:id="@+id/txtCekLaporan"
+                            android:text="Buka menu absen kemudian arahkan smartphone anda ke QR Code absensi"
+                            />
+
+                    </com.riyagayasen.easyaccordion.AccordionView>
+
+                    <com.riyagayasen.easyaccordion.AccordionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        app:isAnimated="true"
+                        android:layout_marginHorizontal="10dp"
+                        app:heading="Kontak Kami"
+                        app:isExpanded="false"
+                        app:isPartitioned="true">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:id="@+id/txtGantiProfil"
+                            android:text="Pengembang aplikasi : ari.kurniawan@ubl.ac.id"
+                            />
+
+                    </com.riyagayasen.easyaccordion.AccordionView>
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
