@@ -20,7 +20,7 @@
         app:menu="@menu/navigation_laporan" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_aktif"
+        android:id="@+id/recycler_view_hadir"
         android:layout_below="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

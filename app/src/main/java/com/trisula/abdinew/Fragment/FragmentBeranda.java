@@ -91,10 +91,8 @@ public class FragmentBeranda extends Fragment {
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
 
             if (data != null) {
-
                 final Barcode barcode = data.getParcelableExtra("barcode");
                 Toast.makeText(getActivity(), "Data " + barcode.displayValue, Toast.LENGTH_LONG).show();
-
             }
 
         }

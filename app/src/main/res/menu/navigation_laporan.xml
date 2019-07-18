@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_aktif"
+        android:id="@+id/navigation_hadir"
         android:icon="@drawable/ic_wait"
         android:title="Hadir" />
 
     <item
-        android:id="@+id/navigation_selesai"
+        android:id="@+id/navigation_ijin"
         android:icon="@drawable/ic_check24"
         android:title="Ijin" />
 
