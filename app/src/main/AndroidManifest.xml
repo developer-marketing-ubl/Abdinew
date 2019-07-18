@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.RiwayatActivity"></activity>
+        <activity android:name=".Activity.IjinActivity"></activity>
+        <activity android:name=".Activity.RiwayatActivity" />
         <activity android:name=".Activity.BantuanActivity" />
         <activity android:name=".Activity.ScanActivity" />
         <activity android:name=".Activity.BerandaActivity" />

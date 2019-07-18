@@ -48,7 +48,7 @@
                         android:layout_marginTop="15dp"
                         app:isAnimated="true"
                         android:layout_marginHorizontal="10dp"
-                        app:heading="Panduan Login Aplikasi"
+                        app:heading="Login Aplikasi"
                         app:isExpanded="false"
                         app:isPartitioned="true">
 
@@ -58,7 +58,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="16sp"
                             android:id="@+id/txtBuatLaporan"
-                            android:text="Masukan NIP untuk login aplikasi untuk bisa menggunakan ABDI Apps"
+                            android:text="Masukan NIP karyawan anda lalu klik login"
                             />
 
                     </com.riyagayasen.easyaccordion.AccordionView>
@@ -69,7 +69,7 @@
                         android:layout_marginTop="15dp"
                         app:isAnimated="true"
                         android:layout_marginHorizontal="10dp"
-                        app:heading="Panduan Absensi"
+                        app:heading="Scan QR Code Absen"
                         app:isExpanded="false"
                         app:isPartitioned="true">
 
@@ -79,7 +79,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="16sp"
                             android:id="@+id/txtCekLaporan"
-                            android:text="Buka menu absen kemudian arahkan smartphone anda ke QR Code absensi"
+                            android:text="Arahkan smartphone anda ke Qr Code absensi yang sudah disediakan"
                             />
 
                     </com.riyagayasen.easyaccordion.AccordionView>
@@ -100,12 +100,10 @@
                             android:layout_height="wrap_content"
                             android:textSize="16sp"
                             android:id="@+id/txtGantiProfil"
-                            android:text="Pengembang aplikasi : ari.kurniawan@ubl.ac.id"
+                            android:text="Apabila terjadi permasalahan pada aplikasi silahkan hubungi pengembang kami : ari.kurniawan@ubl.ac.id"
                             />
 
                     </com.riyagayasen.easyaccordion.AccordionView>
-
-
 
                 </LinearLayout>
 

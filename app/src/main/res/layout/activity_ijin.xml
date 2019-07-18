@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:background="@color/viewBg"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/btnSimpanIjin"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengajuan Ijin"
+                android:layout_marginTop="20dp"
+                android:textStyle="normal"
+                android:layout_gravity="center_horizontal"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="17sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Jenis Ijin"
+                android:textStyle="bold"
+                android:id="@+id/txtStatusGambar"
+                android:textColor="@color/black2"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_selector"
+                android:layout_height="wrap_content"
+                android:padding="7dp">
+
+                <Spinner
+                    android:id="@+id/sp_jenis"
+                    android:layout_width="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"></Spinner>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etIsiIjin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="8dp"
+                android:gravity="top|left"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:lines="6"
+                android:scrollHorizontally="false"
+                android:hint="Isi Ijin"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:background="@drawable/edittext_selector"
+                android:textStyle="bold"
+                android:textColor="@color/black2"
+                android:textColorHint="@color/black2"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kirim"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/btnSimpanIjin"
+        android:background="@color/colorPrimary"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

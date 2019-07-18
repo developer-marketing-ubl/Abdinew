@@ -37,7 +37,6 @@ public class AdapterRiwayat extends RecyclerView.Adapter<AdapterRiwayat.MyViewHo
             relaList = view.findViewById(R.id.relaList);
             txtTermin = view.findViewById(R.id.txtTermin);
             txtWaktu = view.findViewById(R.id.txtWaktuAbsen);
-
         }
     }
 

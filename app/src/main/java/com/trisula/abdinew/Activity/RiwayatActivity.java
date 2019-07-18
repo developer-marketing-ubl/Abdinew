@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -53,6 +54,7 @@ ProgressDialog loading;
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
 
+        getHadir(SharedVariabel.NIP);
     }
 
 
@@ -76,15 +78,17 @@ ProgressDialog loading;
 
     private void getHadir(final String Nip){
 
-        loading = ProgressDialog.show(getApplication(),"Please wait...","Fetching...",false,false);
+        loading = ProgressDialog.show(RiwayatActivity.this,"Please wait...","Fetching...",false,false);
 
         String url = Api_class.API_HADIR+Nip;
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
+
             public void onResponse(String response) {
                 loading.dismiss();
-                //showDetail(response);
+                //Toast.makeText(getApplication(),"Data "+response,Toast.LENGTH_LONG).show();
+                showHadir(response);
             }
         },
                 new Response.ErrorListener() {
@@ -114,6 +118,8 @@ ProgressDialog loading;
                 String waktu = jo.getString("waktu_absen");
                 String status = jo.getString("status");
 
+                SharedVariabel.TERMIN = termin;
+
                 Riwayat_class riwayat = new Riwayat_class(
                         termin,
                         waktu,
@@ -133,7 +139,7 @@ ProgressDialog loading;
 
     private void getIjin(final String Nip){
 
-        loading = ProgressDialog.show(getApplication(),"Please wait...","Fetching...",false,false);
+        loading = ProgressDialog.show(RiwayatActivity.this,"Please wait...","Fetching...",false,false);
 
         String url = Api_class.API_IJIN+Nip;
 
@@ -141,7 +147,7 @@ ProgressDialog loading;
             @Override
             public void onResponse(String response) {
                 loading.dismiss();
-                //showDetail(response);
+                showIjin(response);
             }
         },
                 new Response.ErrorListener() {
@@ -170,6 +176,8 @@ ProgressDialog loading;
                 String termin = jo.getString("termin");
                 String waktu = jo.getString("waktu_absen");
                 String status = jo.getString("status");
+
+                SharedVariabel.TERMIN = termin;
 
                 Riwayat_class riwayat = new Riwayat_class(
                         termin,
