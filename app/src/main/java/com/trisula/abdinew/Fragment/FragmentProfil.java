@@ -28,8 +28,6 @@ import com.trisula.abdinew.Config.SessionSharePreference;
 import com.trisula.abdinew.Kelas.Api_class;
 import com.trisula.abdinew.Kelas.SharedVariabel;
 import com.trisula.abdinew.R;
-
-import org.apache.commons.logging.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
