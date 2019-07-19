@@ -30,6 +30,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.gms.vision.barcode.Barcode;
+import com.trisula.abdinew.Activity.BantuanActivity;
+import com.trisula.abdinew.Activity.IjinActivity;
 import com.trisula.abdinew.Activity.RiwayatActivity;
 import com.trisula.abdinew.Activity.ScanActivity;
 import com.trisula.abdinew.Config.SessionSharePreference;
@@ -67,7 +69,7 @@ public class FragmentBeranda extends Fragment {
     public static final int REQUEST_CODE = 100;
     public static final int PERMISSION_REQUEST = 200;
     SessionSharePreference session;
-    ImageView imaAbsen, imaRiwayat;
+    ImageView imaAbsen, imaRiwayat,imaIjin, imaBantuan;
     TextView txtNamadepan;
     ProgressDialog loading;
     String termin_jv;
@@ -85,6 +87,8 @@ public class FragmentBeranda extends Fragment {
         ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
         imaAbsen = view.findViewById(R.id.imaAbsen);
         imaRiwayat = view.findViewById(R.id.imaRiwayat);
+        imaIjin = view.findViewById(R.id.imaIjin);
+        imaBantuan = view.findViewById(R.id.imaBantuan);
         txtNamadepan = view.findViewById(R.id.txtNamadepan);
         session = new SessionSharePreference(getActivity());
         getData(session.getNama());
@@ -140,6 +144,22 @@ public class FragmentBeranda extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), RiwayatActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imaIjin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), IjinActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imaBantuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), BantuanActivity.class);
                 startActivity(intent);
             }
         });
@@ -271,8 +291,7 @@ public class FragmentBeranda extends Fragment {
                             .setCancelable(false)
                             .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-                                    Intent intent = new Intent(getActivity(),FragmentBeranda.class);
-                                    startActivity(intent);
+
                                     dialog.cancel();
                                 }
                             });
@@ -326,7 +345,9 @@ public class FragmentBeranda extends Fragment {
             for (int i = 0; i < result.length(); i++) {
                 JSONObject c = result.getJSONObject(i);
                 String termin_db = c.getString("termin");
+                String jenis = c.getString("jenis");
                 SharedVariabel.TERMIN = termin_db;
+                SharedVariabel.JENIS = jenis;
             }
 
         } catch (JSONException e) {
